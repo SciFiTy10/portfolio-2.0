@@ -6,9 +6,8 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoPaylocity from '@/images/logos/paylocity-logo.svg'
+import logoEcraGroup from '@/images/logos/ecra-logo.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -183,7 +182,7 @@ function Resume() {
     {
       company: 'Paylocity',
       title: 'Senior Software Engineer',
-      logo: logoPlanetaria,
+      logo: logoPaylocity,
       start: '2023',
       end: {
         label: 'Present',
@@ -193,14 +192,14 @@ function Resume() {
     {
       company: 'Paylocity',
       title: 'Software Engineer',
-      logo: logoAirbnb,
+      logo: logoPaylocity,
       start: '2021',
       end: '2023',
     },
     {
       company: 'ECRA Group',
       title: 'Frontend Developer',
-      logo: logoFacebook,
+      logo: logoEcraGroup,
       start: '2019',
       end: '2021',
     },
