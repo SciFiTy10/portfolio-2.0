@@ -49,8 +49,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'About',
-  description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+  description: `I’m Ty Ridings. I live in the suburbs of Chicago, where I build software to make people's lives easier.`,
 }
 
 export default function About() {
@@ -69,58 +68,58 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            I’m Ty Ridings. I live in the suburbs of Chicago, where I build
+            software to make people's lives easier.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Building software is one of my favorite things to do, and my
+              decision to pursue it as a career has given me some of the best
+              opportunities of my life. I really enjoy the challenge of solving
+              a problem and the feeling you get once you've gotten over the
+              hurdle. In my mind, it's one of the most humbling, yet rewarding
+              experiences you can have.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              I first got into software engineering when I was in college and I
+              was hooked immediately. While I considered myself to be a great
+              student in other subjects, building software was a completely
+              different animal. It forced me to adapt how I thought about
+              problems, and to earn the progress of solving them by asking the
+              right questions and doing the legwork to figure things out when I
+              was stuck. In many ways, building software taught me how to think
+              and the learnings I've taken from doing it have been something
+              that's helped me tremendously in other areas of my life.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
-            </p>
-            <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              When I'm not building applications, you can probably find me on my
+              boat. I absolutely love being out on the water. It's kind of funny
+              because while software requires a more measured approach to
+              things, boats are quite the opposite. Nobody who thinks rationally
+              about their money buys a boat (for recreational use). But life is
+              short, and some of the biggest smiles I've ever cracked were on my
+              pontoon. To me, there's no better way to spend your day than
+              taking a cruise with your family, or anchoring in with friends
+              while our kids swim around us. I can have a bad day, but the
+              moment I start my boat is the end of that bad day.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://github.com/SciFiTy10"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-              Follow on LinkedIn
-            </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
-              icon={MailIcon}
-              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+              href="https://www.linkedin.com/in/tyler-ridings-24804585/"
+              icon={LinkedInIcon}
+              className="mt-4"
             >
-              spencer@planetaria.tech
+              Follow on LinkedIn
             </SocialLink>
           </ul>
         </div>
