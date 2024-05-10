@@ -4,46 +4,32 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
+import { SocialLink } from '@/components/SocialLink'
+import { GitHubIcon } from '@/components/SocialIcons'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Employee Benefits',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+      'An application for adding and editing employee benefits for themselves and their beneficiaries.',
+    githubLink: { href: 'http://planetaria.tech', label: 'github.com' },
+    apiGithubLink: { href: 'http://planetaria.tech', label: 'github.com' },
     logo: logoPlanetaria,
   },
   {
-    name: 'Animaginary',
+    name: 'Big Kahuna Burger',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
+      'A restaurant menu and ordering UI for the famous Big Kahuna Burger restaurant.',
+    githubLink: { href: '#', label: 'github.com' },
     logo: logoAnimaginary,
   },
   {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
+    name: 'Talk Like Snoop',
+    description: `An Alexa Skill which takes the speech that you provide as input and returns it with 'izzle' injected.`,
+    githubLink: { href: '#', label: 'github.com' },
     logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
   },
 ]
 
@@ -60,13 +46,13 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Things I’ve made for fun and to sharpen my skills.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve built which taught me a lot and were a lot of fun to make."
+      title="Things I’ve built that taught me a lot and were a lot of fun to make."
       intro="I’ve worked on projects in a few different domains but they are typically open-source and web based. If you see something that piques your interest, check out the code and let me know if you have ideas for how it can be improved."
     >
       <ul
@@ -84,13 +70,16 @@ export default function Projects() {
               />
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href}>{project.name}</Card.Link>
+              {project.name}
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+            {/* <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.link.label}</span>
-            </p>
+              <span className="ml-2">{project.githubLink.label}</span>
+            </p> */}
+            <SocialLink href={project.githubLink.href} icon={GitHubIcon}>
+              {project.githubLink.label}
+            </SocialLink>
           </Card>
         ))}
       </ul>
