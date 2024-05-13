@@ -8,12 +8,25 @@ import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import { SocialLink } from '@/components/SocialLink'
 import { GitHubIcon } from '@/components/SocialIcons'
+import Link from 'next/link'
 
 const projects = [
   {
     name: 'Employee Benefits',
     description:
       'An application for adding and editing employee benefits for themselves and their beneficiaries.',
+    links: [
+      {
+        href: 'https://github.com/SciFiTy10/employee_benefits_frontend',
+        label: 'github.com (frontend)',
+        icon: GitHubIcon,
+      },
+      {
+        href: 'https://github.com/SciFiTy10/employee_benefits_api',
+        label: 'github.com (api)',
+        icon: GitHubIcon,
+      },
+    ],
     githubLink: { href: 'http://planetaria.tech', label: 'github.com' },
     apiGithubLink: { href: 'http://planetaria.tech', label: 'github.com' },
     logo: logoPlanetaria,
@@ -22,12 +35,36 @@ const projects = [
     name: 'Big Kahuna Burger',
     description:
       'A restaurant menu and ordering UI for the famous Big Kahuna Burger restaurant.',
+    links: [
+      {
+        href: 'https://github.com/SciFiTy10/employee_benefits_frontend',
+        label: 'github.com (frontend)',
+        icon: GitHubIcon,
+      },
+      {
+        href: 'https://github.com/SciFiTy10/employee_benefits_api',
+        label: 'github.com (api)',
+        icon: GitHubIcon,
+      },
+    ],
     githubLink: { href: '#', label: 'github.com' },
     logo: logoAnimaginary,
   },
   {
     name: 'Talk Like Snoop',
     description: `An Alexa Skill which takes the speech that you provide as input and returns it with 'izzle' injected.`,
+    links: [
+      {
+        href: 'https://github.com/SciFiTy10/employee_benefits_frontend',
+        label: 'github.com (frontend)',
+        icon: GitHubIcon,
+      },
+      {
+        href: 'https://github.com/SciFiTy10/employee_benefits_api',
+        label: 'github.com (api)',
+        icon: GitHubIcon,
+      },
+    ],
     githubLink: { href: '#', label: 'github.com' },
     logo: logoHelioStream,
   },
@@ -73,13 +110,22 @@ export default function Projects() {
               {project.name}
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            {/* <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.githubLink.label}</span>
-            </p> */}
-            <SocialLink href={project.githubLink.href} icon={GitHubIcon}>
-              {project.githubLink.label}
-            </SocialLink>
+            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition dark:text-zinc-200">
+              <div className="group/link">
+                {project.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="group flex text-sm font-medium text-zinc-800 transition group-hover/link:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                  >
+                    <GitHubIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
+                    <span className="ml-4 group-hover/link:text-teal-500">
+                      {link.label}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </p>
           </Card>
         ))}
       </ul>
