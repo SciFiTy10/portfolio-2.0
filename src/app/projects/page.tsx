@@ -1,73 +1,80 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoBurger from '@/images/logos/burger.svg'
+import logoTalkLikeSnoop from '@/images/logos/talkLikeSnoop.svg'
+import logoUser from '@/images/logos/user.svg'
+import { GitHubIcon } from '@/components/SocialIcons'
+import { LinkIcon } from '@/components/SocialIcons'
+import Link from 'next/link'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Employee Benefits',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'An application for adding and editing employee benefits for themselves and their beneficiaries.',
+    links: [
+      {
+        href: 'https://github.com/SciFiTy10/employee_benefits_frontend',
+        label: 'github.com (frontend)',
+        icon: GitHubIcon,
+      },
+      {
+        href: 'https://github.com/SciFiTy10/employee_benefits_api',
+        label: 'github.com (api)',
+        icon: GitHubIcon,
+      },
+    ],
+    logo: logoUser,
   },
   {
-    name: 'Animaginary',
+    name: 'Big Kahuna Burger',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'A restaurant menu and ordering UI for the famous Big Kahuna Burger restaurant.',
+    links: [
+      {
+        href: 'https://big-kahuna-burger.netlify.app',
+        label: 'Live Site',
+        icon: LinkIcon,
+      },
+      {
+        href: 'https://github.com/SciFiTy10/burger-restaurant',
+        label: 'github.com',
+        icon: GitHubIcon,
+      },
+    ],
+    logo: logoBurger,
   },
   {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    name: 'Talk Like Snoop',
+    description: `An Alexa Skill which takes the speech that you provide as input and returns it with 'izzle' injected.`,
+    links: [
+      {
+        href: 'https://www.amazon.com/SciFiTy-Talk-Like-Snoop/dp/B07K1SHLJ8',
+        label: 'Install Skill Page',
+        icon: LinkIcon,
+      },
+      {
+        href: 'https://github.com/SciFiTy10/talkLikeSnoop',
+        label: 'github.com',
+        icon: GitHubIcon,
+      },
+    ],
+    logo: logoTalkLikeSnoop,
   },
 ]
 
-function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-        fill="currentColor"
-      />
-    </svg>
-  )
-}
-
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Things I’ve made for fun and to sharpen my skills.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Things I’ve built that taught me a lot and were a lot of fun to make."
+      intro="I’ve worked on projects in a few different domains but they are typically open-source and web based. If you see something that piques your interest, check out the code and let me know if you have ideas for how it can be improved."
     >
       <ul
         role="list"
@@ -84,12 +91,29 @@ export default function Projects() {
               />
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href}>{project.name}</Card.Link>
+              {project.name}
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.link.label}</span>
+            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition dark:text-zinc-200">
+              <div>
+                {project.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="group/link mb-2 mt-2 flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 group-hover/link:text-teal-500 dark:text-zinc-200"
+                  >
+                    {link.icon === GitHubIcon ? (
+                      <GitHubIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
+                    ) : (
+                      <LinkIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
+                    )}
+
+                    <span className="ml-4 group-hover/link:text-teal-500">
+                      {link.label}
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </p>
           </Card>
         ))}
