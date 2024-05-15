@@ -94,26 +94,24 @@ export default function Projects() {
               {project.name}
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition dark:text-zinc-200">
-              <div>
-                {project.links.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="group/link mb-2 mt-2 flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 group-hover/link:text-teal-500 dark:text-zinc-200"
-                  >
-                    {link.icon === GitHubIcon ? (
-                      <GitHubIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
-                    ) : (
-                      <LinkIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
-                    )}
+            <p className="relative z-10 mt-6 text-sm font-medium text-zinc-400 transition dark:text-zinc-200">
+              {project.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="group/link mb-2 mt-2 flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 group-hover/link:text-teal-500 dark:text-zinc-200"
+                >
+                  {link.icon === GitHubIcon ? (
+                    <GitHubIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
+                  ) : (
+                    <LinkIcon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
+                  )}
 
-                    <span className="ml-4 group-hover/link:text-teal-500">
-                      {link.label}
-                    </span>
-                  </Link>
-                ))}
-              </div>
+                  <span className="ml-4 group-hover/link:text-teal-500">
+                    {link.label}
+                  </span>
+                </Link>
+              ))}
             </p>
           </Card>
         ))}
