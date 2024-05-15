@@ -90,6 +90,19 @@ export default function Skills() {
             and notifications, and variables via library sets.
           </Tool>
         </ToolsSection>
+        <ToolsSection title="Build & Deploy">
+          <Tool title="Team City">
+            Creation and modification of build pipelines with agents hosted in
+            docker containers. Creation and modification of build steps,
+            dotCover test coverage reports, and use of custom Powershell
+            scripts.
+          </Tool>
+          <Tool title="Octopus">
+            Creation and modification of deployment pipelines to both Windows
+            hosts and K8s. Creation and modification of process steps, alerting
+            and notifications, and variables via library sets.
+          </Tool>
+        </ToolsSection>
       </div>
     </SimpleLayout>
   )
