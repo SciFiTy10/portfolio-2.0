@@ -90,17 +90,16 @@ export default function Skills() {
             and notifications, and variables via library sets.
           </Tool>
         </ToolsSection>
-        <ToolsSection title="Build & Deploy">
-          <Tool title="Team City">
-            Creation and modification of build pipelines with agents hosted in
-            docker containers. Creation and modification of build steps,
-            dotCover test coverage reports, and use of custom Powershell
-            scripts.
+        <ToolsSection title="Observability">
+          <Tool title="Datadog">
+            Led operational review meetings for our team. Gathered metrics
+            around latency, error rates, and CPU/memory metrics. Managed the
+            creation and modification of monitors, SLOs, dashboards. Monitored
+            production by analyzing traces and logs to gather insights and
+            generate actionable work items.
           </Tool>
-          <Tool title="Octopus">
-            Creation and modification of deployment pipelines to both Windows
-            hosts and K8s. Creation and modification of process steps, alerting
-            and notifications, and variables via library sets.
+          <Tool title="Kibana">
+            Querying and analyzing logs for production issues.
           </Tool>
         </ToolsSection>
       </div>
