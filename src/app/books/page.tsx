@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import { SocialLink } from '@/components/SocialLink'
 import { Container } from '@/components/Container'
-import { GitHubIcon } from '@/components/SocialIcons'
+import { LinkIcon } from '@/components/SocialIcons'
 import bookImage from '@/images/a-cool-guide-to-life.jpg'
 
 export const metadata: Metadata = {
@@ -53,7 +53,7 @@ export default function Books() {
           <ul role="list">
             <SocialLink
               href="https://www.amazon.com/COOL-Guide-Life-Tyler-Ridings/dp/B08YQCQ96P/ref=sr_1_1?crid=2CKHBCQP3Y25A&dib=eyJ2IjoiMSJ9.UOPLK5J9gup2jFaw1Tfi1FnETT0SH9Qku-XHZOvxKYazvc8CadeeDwojLb8tVEoxlIH1Qz_J8p0FNSieg7kFupzDmzMcRpWfRraCjv-_ysSAfYEWCqmsRhNnKjOnL0SxBcpeoRYS_QoUY069w27ChG4WHGir0ZGHteGweHKx7O1dl1qz61GefK1MSYx2aWaXmrMefPaHOS6dXcoGHbpDy8lkr4TzyGQKBhEVSKYkqQM.E-sTq3jlbZXCgQCHDIf86V_AxZQckk-6RNHH7M7Vrs8&dib_tag=se&keywords=a+cool+guide+to+life&qid=1715773173&sprefix=a+cool+guide+to+lif%2Caps%2C121&sr=8-1"
-              icon={GitHubIcon}
+              icon={LinkIcon}
               className="mt-4"
             >
               View on Amazon
