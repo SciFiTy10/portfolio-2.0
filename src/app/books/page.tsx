@@ -19,8 +19,10 @@ export default function Books() {
             <Image
               src={bookImage}
               alt="a book cover for A COOL Guide To Life"
+              width={800}
+              height={800}
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="aspect-square rotate-3 rounded-2xl bg-zinc-100  dark:bg-zinc-800"
             />
           </div>
         </div>
