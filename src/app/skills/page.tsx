@@ -35,7 +35,7 @@ function Tool({
 }
 
 export const metadata = {
-  title: 'Uses',
+  title: 'Skills',
   description: 'Software technologies I have experience in.',
 }
 
