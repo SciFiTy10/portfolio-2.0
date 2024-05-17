@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/SciFiTy10/portfolio-2.0">
-    <img src="images/portrait.jpg" alt="Logo" width="100" height="100">
+    <img src="src/images/portrait.jpg" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">My Portfolio</h3>
@@ -19,14 +19,14 @@
   <p align="center">
     A website I built to house all my projects and books
     <br />
-    <a href="https://github.com/SciFiTy10/portfolio"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/SciFiTy10/portfolio-2.0"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://www.tylerridings.dev">View Demo</a>
     ·
-    <a href="https://github.com/SciFiTy10/portfolio/issues">Report Bug</a>
+    <a href="https://github.com/SciFiTy10/portfolio-2.0/issues">Report Bug</a>
     ·
-    <a href="https://github.com/SciFiTy10/portfolio/issues">Request Feature</a>
+    <a href="https://github.com/SciFiTy10/portfolio-2.0/issues">Request Feature</a>
   </p>
 </p>
 
@@ -39,7 +39,6 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
         <li><a href="#cicd-and-hosting">CI/CD and Hosting</a></li>
-        <li><a href="#state-management">State Management</a></li>
         <li><a href="#project-folder-structure">Project Folder Structure</a></li>
       </ul>
     </li>
@@ -65,7 +64,7 @@
 ## About The Project
 
 <!--add link to main page -->
-<img src="images/main.png" alt="main_section" >
+<img src="src/images/main.jpg" alt="main_page" >
 
 Welcome to my portfolio site!
 
@@ -76,38 +75,28 @@ This is a project I built to showcase my programming projects and the book that 
 ### Built With
 
 - [React](https://reactjs.org)
-- [NextJS](https://www.gatsbyjs.com)
-- [TailwindCSS](https://sass-lang.com)
+- [NextJS](https://nextjs.org)
+- [TailwindCSS](https://tailwindcss.com)
 
 ---
 
 ### CI/CD and Hosting
 
-- [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) - for builds, deployments, and hosting of the project
-
----
-
-### State Management
-
-Application State is kept within a local data.js file and is distributed to child components via the [React Context API](https://reactjs.org/docs/context.html).
-
-Site metadata is retrieved using [GraphQL](https://graphql.org)
+- [Netlify](https://www.netlify.com) - for builds, deployments, and hosting of the project
 
 ---
 
 ### Project Folder Structure
 
-This project is organized by the job to be done for each file.
+This project is organized following the NextJS app router standard.
 
-- There is a components folder, which holds subfolders for a book image component, the section components, and a video component.
+- Below the app folder, each page of the project is given its own folder and page.tsx file
 
-- A context folder establishes the React Context object, Provider, and Consumer which will distribute data to our app's components.
+- Within the same app folder, there are app specific pages like layout.tsx, not-found.tsx, page.tsx (main landing page), and any providers via providers.tsx
 
-- Data is for the application is stored within the Data folder.
+- Common components are kept within a components folder
 
-- Pages holds the main page, as well as a custom error page.
-
-- And finally we have a styles folder, which houses our SCSS modules. That folder contains styling which is applied by component, styling which is shared across components, and UI component styling.
+- The images folder holds logos and images used across the application
 
 ---
 
@@ -132,7 +121,7 @@ Make sure you have the latest version of npm installed
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/SciFiTy10/burger-restaurant.git
+   git clone https://github.com/SciFiTy10/portfolio-2.0.git
    ```
 2. Install NPM packages
    ```sh
@@ -146,22 +135,16 @@ Make sure you have the latest version of npm installed
 1. Running the project in development mode
 
    ```sh
-   gatsby develop
+   npm run dev
    ```
 
-   Then open https://localhost:8000 in your browser.
-
-   Alternatively, to open in your default browser you can do
-
-   ```sh
-   gatsby develop --open
-   ```
+   Then open https://localhost:3000 in your browser.
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/SciFiTy10/burger-restaurant/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/SciFiTy10/portfolio-2.0/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -193,15 +176,15 @@ Project Link - [https://www.tylerridings.dev](https://www.tylerridings.dev)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/SciFiTy10/portfolio.svg?style=for-the-badge
-[contributors-url]: https://github.com/SciFiTy10/portfolio/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/SciFiTy10/portfolio.svg?style=for-the-badge
-[forks-url]: https://github.com/SciFiTy10/portfolio/network/members
-[stars-shield]: https://img.shields.io/github/stars/SciFiTy10/portfolio.svg?style=for-the-badge
-[stars-url]: https://github.com/SciFiTy10/portfolio/stargazers
-[issues-shield]: https://img.shields.io/github/issues/SciFiTy10/portfolio.svg?style=for-the-badge
-[issues-url]: https://github.com/SciFiTy10/portfolio/issues
-[license-shield]: https://img.shields.io/github/license/SciFiTy10/portfolio.svg?style=for-the-badge
-[license-url]: https://github.com/SciFiTy10/portfolio/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/SciFiTy10/portfolio-2.0.svg?style=for-the-badge
+[contributors-url]: https://github.com/SciFiTy10/portfolio-2.0/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SciFiTy10/portfolio-2.0.svg?style=for-the-badge
+[forks-url]: https://github.com/SciFiTy10/portfolio-2.0/network/members
+[stars-shield]: https://img.shields.io/github/stars/SciFiTy10/portfolio-2.0.svg?style=for-the-badge
+[stars-url]: https://github.com/SciFiTy10/portfolio-2.0/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SciFiTy10/portfolio-2.0.svg?style=for-the-badge
+[issues-url]: https://github.com/SciFiTy10/portfolio-2.0/issues
+[license-shield]: https://img.shields.io/github/license/SciFiTy10/portfolio-2.0.svg?style=for-the-badge
+[license-url]: https://github.com/SciFiTy10/portfolio-2.0/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tyler-ridings-24804585/
