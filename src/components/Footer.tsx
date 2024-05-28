@@ -32,7 +32,7 @@ export function Footer() {
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/books">Books</NavLink>
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
+              <p className="text-sm dark:text-white">
                 &copy; {new Date().getFullYear()} Ty Ridings. All rights
                 reserved.
               </p>
