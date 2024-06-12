@@ -23,17 +23,14 @@ function SocialLink({
 }
 
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+      <div className="-my-4 grid grid-cols-2 gap-5 py-4 pr-2 sm:gap-8 lg:grid-cols-3">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
-              rotations[imageIndex % rotations.length],
             )}
           >
             <Image
@@ -75,8 +72,8 @@ export default async function Home() {
             />
           </div>
         </div>
+        <Photos />
       </Container>
-      <Photos />
     </>
   )
 }
